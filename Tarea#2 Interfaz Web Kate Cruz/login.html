@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Interfaz Web — Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="imagenes/favicon.png" rel="icon">
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fondo tipo inicio + overlay -->
+    <section class="bannerweb configform1 login-bg">
+      <div class="overlay-left"></div>
+
+      <form method="post">
+        <fieldset class="login-card">
+
+          <!-- DENTRO del fieldset -->
+          <h3 class="panel-title">Contacto</h3>
+          <p class="subtit-login">Por favor bríndenos sus datos</p>
+
+          <div class="centrado bajar3">
+            <label for="in-txt-user">Usuario:</label>
+            <input class="form-control" id="in-txt-user" type="text" placeholder="Ingrese su usuario" autocomplete="username">
+          </div>
+
+          <div class="centrado bajar3">
+            <label for="in-txt-pass">Contraseña:</label>
+            <input class="form-control" id="in-txt-pass" type="password" placeholder="Ingrese su contraseña" autocomplete="current-password">
+          </div>
+
+          <div class="text-center bajar2">
+            <a href="landing.html" class="btn botones cursor" id="btn-login">Iniciar</a>
+          </div>
+
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Programación JS -->
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+  </body>
+</html>

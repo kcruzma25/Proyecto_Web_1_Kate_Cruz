@@ -1,0 +1,316 @@
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html, body{
+  margin:0; 
+  padding:0;
+  font-family:'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Paleta de colores */
+:root{
+  --c-hero: #004187;    
+  --c-primario: #0068EF; 
+  --c-link: #73C3FF;     
+  --c-texto-hero:#ffffff;
+}
+
+/* Formato */
+.centrado{ text-align:center } /*Centrar texto*/
+.text-center{ text-align:center } 
+.bajar2{ margin-top:50px }       
+.bajar3{ margin-top:30px }
+
+/* Menu simple */
+.menu-bar{ background:transparent }
+.menu-bar nav{
+  display:flex; 
+  justify-content:center; 
+  gap:16px;  /* Espacio entre enlaces */
+  padding:10px 16px;
+}
+.menu-bar nav a{
+  color:var(--c-link); 
+  text-decoration:none; 
+  font-weight:600;
+}
+.menu-bar nav a:hover{ text-decoration:underline }
+
+/*  Imagen de fondo inicio/landing */
+.bannerweb{
+  position:relative; 
+  min-height:100vh;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  background-image:url("../imagenes/banner.jpg"); /* Cambiar ruta si la imagen es otra */
+  background-size:cover; 
+  background-position:center; 
+  background-repeat:no-repeat;
+}
+.overlay-left{ 
+  position:absolute; /* Capa encima del fondo */
+  inset:0;  
+  background:rgba(0,65,135,.55);  
+}
+
+.contenido-banner{
+  position:relative; 
+  z-index:1; 
+  color:var(--c-texto-hero);
+  text-align:center; 
+  padding:24px;
+}
+.contenido-banner h1{
+  margin:0 0 12px; 
+  font-weight:700; /* Negrita */
+  font-size:clamp(32px,5vw,56px);
+  line-height:1.1; 
+  text-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.contenido-banner p{
+  margin:0 0 22px; 
+  font-weight:400; 
+  font-size:clamp(16px,2.2vw,22px);
+  color:#EAF4FF;
+}
+
+/* Botones */
+.botones{
+  display:inline-block; 
+  padding:12px 22px; /*Alto y ancho visual del botón */
+  border:none; 
+  border-radius:999px;
+  background:var(--c-primario); 
+  color:#fff; 
+  font-weight:700; 
+  letter-spacing:.3px;
+  text-decoration:none;
+}
+.botones:hover{ filter:brightness(1.05) }
+
+/* Footer */
+footer{ 
+  background:#0d6efd; 
+  padding:20px 
+}
+.formatospie{ 
+  color:#fff; 
+  font-size:16px; 
+  margin:0; 
+  text-align:center 
+}
+
+/* Landing */
+.landing-hero .titulo-landing{
+  color:#73C3FF;
+  margin:0 0 12px; 
+  font-weight:700; 
+  font-size:clamp(24px,4.5vw,40px);
+  text-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.landing-hero .botones + .botones{ margin-left:12px }
+
+/* Login */
+.login-bg{
+  position:relative; 
+  min-height:100vh;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  background-image:url("../imagenes/banner.jpg");
+  background-size:cover; 
+  background-position:center; 
+  background-repeat:no-repeat;
+}
+.login-bg .overlay-left{ 
+  position:absolute; 
+  inset:0; 
+  background:rgba(0,65,135,.55); 
+  pointer-events:none 
+}
+
+/* Panel rectángulo */
+.login-card{
+  position:relative; 
+  z-index:1;
+  background:#73c3ff; 
+  border:none; 
+  border-radius:24px; /* Esquinas redondeadas */
+  max-width:560px; 
+  width:calc(100% - 32px);
+  padding:44px 26px 30px; /* arriba para bajar el título dentro del panel */
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+}
+
+/* Título y subtítulo dentro del panel */
+.login-card .panel-title{
+  color:#fff;
+  font-weight:700;
+  font-size:clamp(26px,3.2vw,36px);
+  line-height:1.1;
+  text-align:center;
+  margin:4px 0 8px;  /* sube/baja el título */
+}
+.login-card .subtit-login{
+  color:#fff; 
+  text-align:center;
+  margin:8px 0 18px; 
+  font-size:18px; 
+  font-weight:400;
+}
+
+/* Labels e inputs */
+.login-card label{ 
+  display:block; /* Ocupa toda la  línea */
+  margin:0 0 8px; 
+  color:#fff; 
+  font-weight:700; 
+  font-size:20px 
+}
+.form-control{
+  width:86%; 
+  margin:0 auto;
+  background:#fff; 
+  color:#0b1223; 
+  border:none; 
+  border-radius:999px;
+  padding:12px 16px; 
+  font-size:16px;
+  box-shadow:0 2px 0 rgba(0,0,0,.06), 0 6px 12px rgba(0,0,0,.08);
+  outline:none;
+}
+
+/* Botón “Iniciar” */
+#btn-login.botones{
+  background:#0068ef; 
+  padding:14px 28px; 
+  border-radius:999px;
+  font-weight:700; 
+  font-size:20px; 
+  letter-spacing:.2px;
+  box-shadow:0 8px 18px rgba(0,0,0,.18); 
+  margin-top:18px;
+}
+
+/* Sitio y Apliación */
+.site-wrap{ 
+  max-width:1100px; 
+  margin:0 auto; 
+  padding:40px 20px 
+}
+
+.titulo-seccion{
+  color:#73C3FF; 
+  font-weight:700; 
+  text-align:center;
+  margin:0 0 16px; 
+  font-size:clamp(22px,4vw,40px);
+  text-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.subtitulo-seccion{ 
+  color:#0b1223; 
+  font-weight:700; 
+  margin:0 0 8px; 
+  font-size:20px 
+}
+
+.info-grid{ 
+  display:grid; 
+  gap:16px; 
+  grid-template-columns:1fr 
+}
+@media (min-width:720px){ 
+  .info-grid{ grid-template-columns:1fr 1fr } 
+}
+
+.card{
+  background:#fff; 
+  border-radius:14px; 
+  padding:18px 18px 20px;
+  border:1px solid #E2EFF6; 
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.tabla-horarios{ 
+  width:100%; 
+  border-collapse:collapse; 
+  font-size:16px 
+}
+.tabla-horarios thead th{
+  text-align:left; 
+  background:#F3FAFD; 
+  color:#0b1223;
+  padding:10px 12px; 
+  border-bottom:1px solid #DDECF5;
+}
+.tabla-horarios tbody td{ 
+  padding:10px 12px; 
+  border-bottom:1px solid #EEF6FA 
+}
+
+.mini-galeria{ 
+  display:grid; 
+  gap:12px; 
+  grid-template-columns:repeat(2,1fr) 
+}
+@media (min-width:720px){ 
+  .mini-galeria{ grid-template-columns:repeat(4,1fr) } 
+}
+.mini-galeria img{
+  width:100%; 
+  height:140px; 
+  object-fit:cover; 
+  border-radius:12px;
+  box-shadow:0 6px 14px rgba(0,0,0,.10);
+}
+
+.lista-contacto{ 
+  list-style:none; 
+  padding:0; 
+  margin:0 0 12px 
+}
+.lista-contacto li{ 
+  margin:6px 0; 
+  color:#0b1223 
+}
+
+/* Aplicación */
+.servicios{
+  max-width:1000px; 
+  margin:0 auto; 
+  padding:40px 20px;
+}
+.servicios h2{            /* “Servicios Dentales” */
+  color:#0068EF; 
+  text-align:center; 
+  font-weight:700; 
+  margin:0 0 16px;
+}
+.servicio{ margin-bottom:50px }
+.servicio h3{ 
+  color:#02457A; 
+  font-size:28px; 
+  margin:0 0 10px; 
+  text-align:center 
+}
+.servicio p{
+  font-size:18px; 
+  color:#022c43; 
+  margin:0 0 16px; 
+  text-align:center;
+  max-width:800px; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+.img-servicio{
+  max-width:900px; 
+  width:100%;
+  height:260px;           /* Altura para uniformar tarjetas */
+  object-fit:cover;
+  border-radius:12px; 
+  box-shadow:0 6px 14px rgba(0,0,0,.10);
+  display:block; 
+  margin:12px auto;       /* Centra la imagen bajo al texto*/
+}
