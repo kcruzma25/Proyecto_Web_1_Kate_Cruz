@@ -1,0 +1,977 @@
+/* ===========================
+   MENÚ DESPLEGABLE
+=========================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #0b1223;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: var(--c-primario);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: #0b1223;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar menú */
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* ===========================
+   SERVICIOS / BENEFICIOS
+=========================== */
+.titulo-seccion {
+  color: #004187;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: clamp(26px, 4vw, 42px);
+}
+
+.subtitulo-seccion {
+  color: #0b1223;
+  font-size: 20px;
+  margin-top: 24px;
+  font-weight: 700;
+}
+
+.servicio-detalle {
+  padding: 40px 20px;
+  background-color: #f8fbff;
+}
+
+.servicio-detalle .site-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.servicio-detalle ul {
+  text-align: left;
+  display: inline-block;
+  margin: 10px 0 20px 0;
+  line-height: 1.6;
+}
+
+.servicio-detalle li {
+  color: #022c43;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+/* Beneficios */
+.beneficios-section {
+  background-color: #004187;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.beneficios-section iframe {
+  flex: 1 1 300px;
+  max-width: 320px;
+  height: 320px;
+  border: none;
+  border-radius: 12px;
+}
+
+.beneficios-texto {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.beneficios-texto h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.beneficios-texto ul {
+  list-style: disc;
+  padding-left: 24px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.beneficios-texto li {
+  margin-bottom: 6px;
+}
+
+/* Botón volver */
+.volver-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 40px 0;
+}
+
+.volver-centro .botones {
+  background-color: #004187;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.volver-centro .botones:hover {
+  background-color: #0068ef;
+}
+
+/* ===========================
+   GALERÍA DE VIDEOS
+=========================== */
+.galeria-container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.galeria-titulo {
+  color: #004187;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.galeria-subtitulo {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.video-titulo {
+  padding: 15px;
+  font-weight: 600;
+  color: #004187;
+  background-color: #f8fbff;
+}
+
+/* ===========================
+   TESTIMONIOS
+=========================== */
+.testimonios-container {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonio-card {
+  border-radius: 14px;
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #fff;
+}
+
+.nombre-paciente {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 8px 0;
+}
+
+audio {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Colores tarjetas */
+.color1 { background-color: #004187; }
+.color2 { background-color: #0068ef; }
+.color3 { background-color: #008c99; }
+.color4 { background-color: #009c68; }
+.color5 { background-color: #8a49b8; }
+
+/* ===========================
+   UBICACIÓN
+=========================== */
+.ubicacion-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #f8fbff;
+  padding: 60px 20px;
+  gap: 30px;
+}
+
+.ubicacion-info {
+  background-color: #004187;
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  line-height: 1.8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ubicacion-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ubicacion-info h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ubicacion-mapa {
+  flex: 2 1 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ubicacion-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===========================
+   CONTACTO (FORMULARIO NUEVO)
+=========================== */
+.contacto-fondo {
+  background-color: #f0f6ff;
+  padding: 80px 0;
+}
+
+.contacto-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.contacto-info {
+  flex: 1 1 350px;
+  background-color: #004187;
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.contacto-info h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.contacto-info h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #bcd7ff;
+}
+
+/* Redes dentro de contacto */
+.redes-contacto {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.redes-contacto h3 {
+  color: #bcd7ff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.redes-contacto a {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.redes-contacto img {
+  width: 40px;
+  height: 40px;
+  background-color: #4A90E2;
+  border-radius: 50%;
+  padding: 6px;
+  transition: 0.3s ease;
+  border: 2px solid #ffffff;
+}
+
+.redes-contacto img:hover {
+  background-color: #0068ef;
+  transform: scale(1.1);
+}
+
+/* Formulario */
+.contacto-form {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto-form h3 {
+  color: #004187;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  background-color: #f9fbff;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus,
+.contacto-form select:focus {
+  outline: none;
+  border-color: #004187;
+  box-shadow: 0 0 6px rgba(0, 65, 135, 0.3);
+}
+
+.contacto-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Checkbox y botón */
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  gap: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.contacto-form button {
+  background-color: #004187;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contacto-form button:hover {
+  background-color: #0068ef;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .contacto-box {
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+/* Ajuste fino del checkbox */
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* antes estaba flex-end */
+  margin-top: 5px;
+  margin-bottom: 0;
+  gap: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ======== Unificación de colores del menú ======== */
+.menu-links a,
+.dropbtn {
+  color: #4A90E2 !important;     /* azul uniforme */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover,
+.dropbtn:hover {
+  color: #0068ef !important;     /* azul más claro al pasar */
+}
+
+/* Opcional: color para el link activo (la página actual) */
+.menu-links a.active {
+  color: #0068ef !important;
+  font-weight: 700;
+}
+
+/* ======== Ajuste del logo ======== */
+.logo img {
+  width: 60px;       /* tamaño anterior: 30–40px aprox */
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.logo span {
+  font-size: 28px;   /* agranda el texto "Clínica Dental" */
+  font-weight: 700;
+  color: #004187;
+}
+
+
+/* ===========================
+   MENÚ UNIFICADO Y LOGO AJUSTADO
+=========================== */
+.menu-links a,
+.dropbtn {
+  color: #63b3ff !important;  /* azul celeste uniforme */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover,
+.dropbtn:hover {
+  color: #1e90ff !important; /* azul más fuerte al pasar */
+}
+
+/* Enlace activo */
+.menu-links a.active {
+  color: #1e90ff !important;
+  font-weight: 700;
+}
+
+/* ======== Ajuste del logo ======== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 75px;       /* más grande para mejor visibilidad */
+  height: auto;
+  vertical-align: middle;
+}
+
+.logo span {
+  font-size: 30px;   /* texto más grande */
+  font-weight: 700;
+  color: #0068EF;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   LIGHTBOX AJUSTADO AL TAMAÑO DE LA FOTO
+=========================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;   /* ✔ Oculto por defecto */
+  z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cuando se abre */
+.modal.mostrar {
+  display: flex !important;
+}
+
+/* Caja que rodea la imagen — se ajusta AUTOMÁTICO */
+.modal-content {
+  background: white;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+
+  display: inline-block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Imagen dentro de la caja */
+.modal-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* Botón cerrar */
+.close {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: #e2e2e2;
+}
+
+/* ===========================
+   SUSCRIPCIÓN NEWSLETTER
+=========================== */
+
+.suscripcion-box {
+  margin-top: 60px;
+  padding: 50px 20px;
+  text-align: center;
+  background: #F7FBFF;
+  border-top: 1px solid #e4eef7;
+}
+
+.suscripcion-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #004187;
+  margin-bottom: 20px;
+}
+
+.suscripcion-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.suscripcion-form input {
+  flex: 1;
+  min-width: 260px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  transition: .3s;
+  outline: none;
+}
+
+.suscripcion-form input:focus {
+  border-color: #004187;
+  box-shadow: 0 0 6px rgba(0, 65, 135, 0.3);
+}
+
+.suscripcion-form button {
+  background: #0068EF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.suscripcion-form button:hover {
+  background: #004EC7;
+}
+
+.suscribcion-alert {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.suscribcion-alert.ok { color: #008c4c; font-weight: 600; }
+.suscribcion-alert.error { color: #c0392b; font-weight: 600; }
+
+
+/* ===========================
+   LIGHTBOX PARA VIDEOS
+=========================== */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-container {
+  width: 80%;
+  max-width: 900px;
+  position: relative;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Botón cerrar */
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  font-size: 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+
+/* ===========================
+   MINIATURAS Y BOTONES VIDEO
+=========================== */
+
+.thumb-video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+  display: block;
+}
+
+.btn-ver {
+  background-color: #0068EF;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto 20px;
+  transition: .3s;
+}
+
+.btn-ver:hover {
+  background-color: #004EC7;
+}
+
+
+/* ===========================
+   GALERÍA DE RESULTADOS
+=========================== */
+
+.galeria-titulo {
+  text-align: center;
+  font-size: 38px;
+  margin-top: 40px;
+  font-weight: 700;
+  color: #004187;
+}
+
+.galeria-subtitulo {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.galeria-item {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: .3s;
+}
+
+.galeria-item:hover {
+  transform: translateY(-6px);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.foto-nombre {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #004187;
+}
+
+
+/* Carousel de testimonios */
+.carrusel-section {
+  max-width: 950px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.carrusel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.carrusel-slides {
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slide.active {
+  display: flex;
+}
+
+.foto-perfil-carrusel {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid #0068EF;
+}
+
+.nombre-paciente {
+  font-size: 22px;
+  font-weight: 700;
+  color: #004187;
+}
+
+.estrellas {
+  color: gold;
+  font-size: 18px;
+  margin: 8px 0 15px;
+}
+
+audio {
+  width: 90%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Flechas */
+.carrusel-btn {
+  background: #ffc82e;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.carrusel-btn:hover {
+  background: #f1b800;
+}
+
+/* Puntos */
+.carrusel-dots {
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #0068EF;
+}
+
+/* Colores originales de tus tarjetas */
+.color1 { background-color: #004187; }
+.color2 { background-color: #0068ef; }
+.color3 { background-color: #008c99; }
+.color4 { background-color: #009c68; }
+
+/* Diseño de cada slide */
+.slide {
+  min-width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.foto-perfil-carrusel {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.estrellas i {
+  color: gold;
+  font-size: 22px;
+  margin: 2px;
+}
+
+/* Botones */
+.carrusel-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #004187;
+  padding: 10px;
+}
+
+/* --- Nombres de pacientes en blanco --- */
+.nombre-paciente {
+  color: #ffffff !important;
+}

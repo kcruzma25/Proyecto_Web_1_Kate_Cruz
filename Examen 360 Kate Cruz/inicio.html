@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental</title>
+
+  <!-- Ícono -->
+  <link href="imagenes/favicon.png" rel="icon">
+
+  <!-- Estilos -->
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/sitio.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!--  Menú  -->
+  <header class="menu-bar">
+    <div class="menu-contenido">
+      <div class="logo">
+        <img src="imagenes/favicon.png" alt="Logo Clínica Dental">
+        <span>Clínica Dental</span>
+      </div>
+
+    <nav class="menu-links">
+      <a href="inicio.html" class="active">Inicio</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Servicios ▾</button>
+        <div class="dropdown-content">
+          <a href="servicios/blanqueamiento.html">Blanqueamiento</a>
+          <a href="servicios/ortodoncia.html">Ortodoncia</a>
+          <a href="servicios/implantes.html">Implantes</a>
+          <a href="servicios/endodoncia.html">Endodoncia</a>
+          <a href="servicios/radiografias.html">Radiografías</a>
+          <a href="servicios/limpieza.html">Limpieza</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Galería ▾</button>
+        <div class="dropdown-content">
+          <a href="galeria/videos.html">Videos informativos</a>
+          <a href="galeria/testimonios.html">Testimonios</a>
+          <a href="galeria/fotos.html">Resultados</a>
+        </div>
+      </div>
+
+      <a href="ubicacion.html">Ubicación</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    </div>
+  </header>
+
+  <!-- Vídeo fondo -->
+  <section id="inicio" class="banner-inicio">
+    <div class="configvideo">
+      <video height="550" width="100%" autoplay loop muted>
+        <source src="videos/video3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="contenido-hero">
+      <h1>Citas Online</h1>
+      <h2>Una mejor sonrisa comienza hoy</h2>
+      <p>Atención dental moderna y personalizada para toda la familia.</p>
+
+      <div class="botones-hero">
+        <a href="contacto.html" class="boton-primario">Agendar Cita</a>
+        <a href="#nosotros" class="boton-secundario">Saber Más →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección nosotros -->
+  <section id="nosotros" class="nosotros-seccion">
+    <div class="nosotros-contenido">
+
+      <div class="nosotros-texto">
+        <h2>Bienvenido a <span class="nombre-clinica"><span class="azul">Clínica</span> <span class="azul">Dental</span></span></h2>
+        <p>
+          En <strong>Clínica Dental</strong> ayudamos a nuestros pacientes a mantener una
+          sonrisa saludable y estética mediante técnicas actualizadas, equipo moderno y atención personalizada.
+        </p>
+        <p>
+          Nuestro objetivo es brindar seguridad, confianza y resultados duraderos en cada visita.
+        </p>
+      </div>
+
+      <!-- Imagen con Lightbox-->
+      <div class="nosotros-imagen">
+        <!-- Imagen pequeña -->
+        <img id="myImg" src="imagenes/inicio.jpg" alt="Equipo dental en consulta" style="cursor:pointer; border-radius:12px;">
+
+        <div id="modal1" class="modal">
+          <span class="close">&times;</span>
+
+          <div class="modal-content">
+            <img id="img01" src="">
+          </div>
+
+          <div id="caption"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="formatospie">© 2025 Clínica Dental — Todos los derechos reservados</p>
+  </footer>
+
+  <!-- JS del Lightbox -->
+  <script src="js/lightbox.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental</title>
+
+  <link href="imagenes/favicon.png" rel="icon">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/sitio.css" rel="stylesheet">
+
+  <!-- Íconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="web-sitio">
+
+  <!-- Menú -->
+  <header class="menu-bar">
+    <div class="menu-contenido">
+
+      <div class="logo">
+        <img src="imagenes/favicon.png" alt="Logo Clínica Dental">
+        <span>Clínica Dental</span>
+      </div>
+
+      <nav class="menu-links">
+        <a href="inicio.html">Inicio</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Servicios ▾</button>
+          <div class="dropdown-content">
+            <a href="servicios/blanqueamiento.html">Blanqueamiento</a>
+            <a href="servicios/ortodoncia.html">Ortodoncia</a>
+            <a href="servicios/implantes.html">Implantes</a>
+            <a href="servicios/endodoncia.html">Endodoncia</a>
+            <a href="servicios/radiografias.html">Radiografías</a>
+            <a href="servicios/limpieza.html">Limpieza</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Galería ▾</button>
+          <div class="dropdown-content">
+            <a href="galeria/videos.html">Videos informativos</a>
+            <a href="galeria/testimonios.html">Testimonios</a>
+            <a href="../galeria/fotos.html">Resultados</a>
+          </div>
+        </div>
+
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- Formulario -->
+  <section class="contacto-fondo">
+    <div class="contacto-box">
+
+      <!-- Info -->
+      <div class="contacto-info">
+        <h2>¡Contáctanos!</h2>
+        <p>Agende su cita o envíenos un mensaje y le responderemos lo antes posible.</p>
+
+        <div class="info-extra">
+
+          <h3><i class="fa-solid fa-phone"></i> Teléfonos</h3>
+          <p>(506) 5555-5555</p>
+
+          <h3><i class="fa-solid fa-calendar"></i> Horario</h3>
+          <p>Lunes a Viernes: 8:00 AM – 6:00 PM</p>
+
+        </div>
+
+        <div class="redes-contacto">
+          <h3>Síguenos</h3>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Formulario -->
+      <form id="formCita" class="contacto-form">
+        <h3>Formulario de contacto</h3>
+        <p id="mensajeAlert"></p>
+
+        <div class="form-row">
+          <input type="text" id="nombreTxt" name="nombre" placeholder="Nombre" required>
+          <input type="text" id="apellidoTxt" name="apellidos" placeholder="Apellido" required>
+        </div>
+
+        <div class="form-row">
+          <input type="email" id="emailTxt" name="correo" placeholder="Correo electrónico" required>
+          <input type="tel" id="numberTxt" name="telefono" placeholder="Teléfono" required>
+        </div>
+
+        <select id="servicioSelect" name="servicio" required>
+          <option value="">Seleccione el servicio</option>
+          <option>Blanqueamiento</option>
+          <option>Implantes</option>
+          <option>Endodoncia</option>
+          <option>Ortodoncia</option>
+          <option>Radiografías</option>
+          <option>Limpieza dental</option>
+        </select>
+
+        <textarea id="mensajeTxt" name="comentarios" rows="4" 
+                  placeholder="Mensaje o motivo de la cita..." required></textarea>
+
+        <label class="check">
+          <input type="checkbox" required> Acepto los términos y condiciones.
+        </label>
+
+        <button id="btnSend" type="submit">Enviar</button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p class="formatospie">© 2025 Clínica Dental — Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- Librería EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Archivo JS -->
+  <script src="js/contacto.js"></script>
+
+</body>
+</html>

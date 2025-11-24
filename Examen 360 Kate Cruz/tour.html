@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour Virtual 360</title>
+
+  <!-- Favicon -->
+  <link href="imagenes/favicon.png" rel="icon">
+
+  <!-- Favicons de alta resolución -->
+<link rel="icon" type="image/png" sizes="16x16"  href="imagenes/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32"  href="imagenes/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64"  href="imagenes/favicon.png">
+<link rel="icon" type="image/png" sizes="128x128" href="imagenes/favicon.png">
+<link rel="icon" type="image/png" sizes="256x256" href="imagenes/favicon.png">
+
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos -->
+  <link href="css/tour.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Encabezado -->
+  <header class="fondo text-center py-4">
+    <h1 class="text-white fw-bold">Tour Virtual 360</h1>
+    <p class="text-white fs-5 mt-1" style="opacity: 0.9;">Conoce nuestra clínica dental</p>
+  </header>
+
+  <!-- Contenedor del tour 360 -->
+  <div id="container_principal"></div>
+
+  <!-- Footer -->
+  <footer class="footer-clinica">
+    <div class="footer-container">
+
+      <!-- Columna izq -->
+      <div class="footer-col">
+        <h3>Información de la Clínica</h3>
+
+        <div class="footer-item">
+          <i class="fa-solid fa-location-dot"></i>
+          Escazú, San José, Costa Rica
+        </div>
+
+        <div class="footer-item">
+          <i class="fa-solid fa-award"></i>
+          Más de 10 años de experiencia
+        </div>
+
+        <div class="footer-item">
+          <i class="fa-solid fa-calendar"></i>
+          Lunes a Viernes — 9:00am a 6:00pm
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-redes mt-3" style="display:flex; gap:15px; font-size:22px;">
+          <a href="https://facebook.com" target="_blank" style="color:white;">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" style="color:white;">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/50600000000" target="_blank" style="color:white;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna derecha-->
+      <div class="footer-col">
+        <h3>Contáctanos</h3>
+
+        <div class="footer-item">
+          <i class="fa-solid fa-phone"></i>
+          +506 0000-0000
+        </div>
+
+        <div class="footer-item">
+          <i class="fa-solid fa-envelope"></i>
+          clinica@dentalzen.com
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Clínica Dental Zen — Todos los derechos reservados
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Librerías Panolens -->
+  <script src="https://pchen66.github.io/js/three/three.min.js"></script>
+  <script src="https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js"></script>
+
+  <!-- Lógica del Tour -->
+  <script src="js/tour.js"></script>
+
+  <!-- Herramienta XYZ -->
+  <script src="js/mapper.js"></script>
+
+</body>
+</html>
