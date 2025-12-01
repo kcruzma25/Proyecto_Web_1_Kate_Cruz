@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Pacientes · Clínica Dental</title>
+
+  <link href="../imagenes/favicon.png" rel="icon">
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="../css/sitio.css" rel="stylesheet">
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css" />
+</head>
+
+<body>
+
+  <!-- MENÚ -->
+  <header class="menu-bar">
+    <div class="menu-contenido">
+
+      <div class="logo">
+        <img src="../imagenes/favicon.png" alt="Logo Clínica Dental">
+        <span>Clínica Dental</span>
+      </div>
+
+      <nav class="menu-links">
+        <a href="../inicio.html">Inicio</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">Servicios ▾</button>
+          <div class="dropdown-content">
+            <a href="../servicios/blanqueamiento.html">Blanqueamiento</a>
+            <a href="../servicios/ortodoncia.html">Ortodoncia</a>
+            <a href="../servicios/implantes.html">Implantes</a>
+            <a href="../servicios/endodoncia.html">Endodoncia</a>
+            <a href="../servicios/radiografias.html">Radiografías</a>
+            <a href="../servicios/limpieza.html">Limpieza</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Galería ▾</button>
+          <div class="dropdown-content">
+            <a href="videos.html">Videos informativos</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="fotos.html" class="active">Resultados</a>
+          </div>
+        </div>
+
+        <a href="../ubicacion.html">Ubicación</a>
+        <a href="../contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- GALERÍA -->
+  <section class="container pt-5 pb-5">
+
+    <h2 class="galeria-titulo">Resultados de Pacientes</h2>
+    <p class="galeria-subtitulo">Antes y después de tratamientos dentales realizados en la clínica.</p>
+
+    <div class="tz-gallery">
+      <div class="galeria-grid">
+
+        <!-- FOTO 1 -->
+        <div class="galeria-item">
+          <a href="../imagenes/resultados/resultado1.jpg">
+            <img src="../imagenes/resultados/resultado1.jpg" alt="Resultado 1">
+          </a>
+          <div class="foto-nombre">Resultado 1</div>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="galeria-item">
+          <a href="../imagenes/resultados/resultado2.jpg">
+            <img src="../imagenes/resultados/resultado2.jpg" alt="Resultado 2">
+          </a>
+          <div class="foto-nombre">Resultado 2</div>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="galeria-item">
+          <a href="../imagenes/resultados/resultado3.jpg">
+            <img src="../imagenes/resultados/resultado3.jpg" alt="Resultado 3">
+          </a>
+          <div class="foto-nombre">Resultado 3</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="volver-centro">
+      <a href="../inicio.html" class="botones">Volver al Inicio</a>
+    </div>
+
+  </section>
+
+
+  <!-- PIE -->
+  <footer>
+    <p class="formatospie">© 2025 Clínica Dental — Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- Lightbox Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
+
+</body>
+
+</html>

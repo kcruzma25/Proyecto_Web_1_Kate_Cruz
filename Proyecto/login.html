@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Clínica Dental · Acceso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Ícono -->
+  <link href="imagenes/favicon.png" rel="icon">
+
+  <!-- Estilos -->
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/sitio.css" rel="stylesheet">
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Lottie Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Fondo con overlay -->
+  <section class="bannerweb configform1 login-bg">
+    <div class="overlay-left"></div>
+
+    <form method="post">
+      <fieldset class="login-card">
+
+        <h3 class="panel-title">Identificación</h3>
+        <p class="subtit-login">Ingrese sus credenciales</p>
+
+        <!-- Usuario -->
+        <div class="centrado bajar3">
+          <label for="in-txt-user">Usuario:</label>
+          <input class="form-control" id="in-txt-user"
+                 type="text" placeholder="Ingrese su usuario"
+                 autocomplete="username">
+        </div>
+
+        <!-- Contraseña -->
+        <div class="centrado bajar3">
+          <label for="in-txt-pass">Contraseña:</label>
+          <input class="form-control" id="in-txt-pass"
+                 type="password" placeholder="Ingrese su contraseña"
+                 autocomplete="current-password">
+        </div>
+
+        <!-- Botón -->
+        <div class="text-center bajar2">
+          <a class="btn botones cursor" id="btn-login">Iniciar</a>
+        </div>
+
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- JS del Login -->
+  <script src="js/login.js"></script>
+
+</body>
+</html>
